@@ -59,7 +59,6 @@ export async function POST(req) {
   if (eventType === 'user.created' || eventType === 'user.updated') {
     const { id, first_name, last_name, image_url, email_addresses, username } =
       evt?.data;
-
     try {
       const user = await createOrUpdateUser(
         id,
@@ -69,7 +68,6 @@ export async function POST(req) {
         email_addresses,
         username
       );
-
       if (user && eventType === 'user.created') {
         try {
           await clerkClient.users.updateUserMetadata(id, {
@@ -84,7 +82,9 @@ export async function POST(req) {
       }
     } catch (error) {
       console.log('Error creating or updating user:', error);
-      return new Response('Error occured', { status: 400 });
+      return new Response('Error occured', {
+        status: 400,
+      });
     }
   }
 
@@ -94,7 +94,9 @@ export async function POST(req) {
       await deleteUser(id);
     } catch (error) {
       console.log('Error deleting user:', error);
-      return new Response('Error occured', { status: 400 });
+      return new Response('Error occured', {
+        status: 400,
+      });
     }
   }
 
