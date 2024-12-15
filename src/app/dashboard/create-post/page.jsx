@@ -127,6 +127,11 @@ export default function CreatePostPage() {
               <option value='javascript'>JavaScript</option>
               <option value='reactjs'>React.js</option>
               <option value='nextjs'>Next.js</option>
+              <option value='nextjs'>Artificial Intelligence</option>
+              <option value='nextjs'>ML/DL</option>
+              <option value='nextjs'>Cyber Security</option>
+              <option value='nextjs'>IT & Coding</option>
+              <option value='nextjs'>Technology</option>
             </Select>
           </div>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>

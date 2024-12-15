@@ -146,9 +146,14 @@ export default function Search() {
             <label className='font-semibold'>Category:</label>
             <Select onChange={handleChange} id='category'>
               <option value='uncategorized'>Uncategorized</option>
+              <option value='javascript'>JavaScript</option>
               <option value='reactjs'>React.js</option>
               <option value='nextjs'>Next.js</option>
-              <option value='javascript'>JavaScript</option>
+              <option value='nextjs'>Artificial Intelligence</option>
+              <option value='nextjs'>ML/DL</option>
+              <option value='nextjs'>Cyber Security</option>
+              <option value='nextjs'>IT & Coding</option>
+              <option value='nextjs'>Technology</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>
