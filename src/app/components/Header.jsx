@@ -87,16 +87,19 @@ export default function Header() {
             Home
           </Navbar.Link>
         </Link>
-        <Link href='/about'>
-          <Navbar.Link active={path === '/about'} as={'div'}>
-            About
-          </Navbar.Link>
-        </Link>
+        
         <Link href='/search?category=null'>
           <Navbar.Link active={path === '/search?category=null'} as={'div'}>
             Blogs
           </Navbar.Link>
         </Link>
+
+        <Link href='/about'>
+          <Navbar.Link active={path === '/about'} as={'div'}>
+            About
+          </Navbar.Link>
+        </Link>
+        
         <Link href='/contact'>
           <Navbar.Link active={path === '/contact'} as={'div'}>
             Contact us

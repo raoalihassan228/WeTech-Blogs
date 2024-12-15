@@ -29,13 +29,7 @@ export default function FooterCom() {
             <div>
               <Footer.Title title='About' />
               <Footer.LinkGroup col>
-                <Footer.Link
-                  href='https://www.100jsprojects.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  100 JS Projects
-                </Footer.Link>
+                
                 <Footer.Link
                   href='/about'
                   target='_blank'
@@ -49,13 +43,13 @@ export default function FooterCom() {
               <Footer.Title title='Follow us' />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href='https://www.github.com/sahandghavidel'
+                  href='https://www.github.com/raoalihassan228'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
                   Github
                 </Footer.Link>
-                <Footer.Link href='#'>Discord</Footer.Link>
+                <Footer.Link href='https://www.linkedin.com/in/raoalihassan-webdeveloper-jamstack-react/'>LinkedIn</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
