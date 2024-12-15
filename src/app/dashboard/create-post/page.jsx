@@ -130,7 +130,7 @@ export default function CreatePostPage() {
               <option value='nextjs'>Artificial Intelligence</option>
               <option value='nextjs'>ML/DL</option>
               <option value='nextjs'>Cyber Security</option>
-              <option value='nextjs'>IT & Coding</option>
+              <option value='nextjs'>IT and Coding</option>
               <option value='nextjs'>Technology</option>
             </Select>
           </div>
