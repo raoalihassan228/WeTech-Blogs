@@ -1,34 +1,34 @@
-'use client';
-import { Button, Navbar, TextInput } from 'flowbite-react';
-import Link from 'next/link';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon, FaSun } from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
-import { useTheme } from 'next-themes';
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import { dark, light } from '@clerk/themes';
-import { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import Head from 'next/head';
+"use client";
+import { Button, Navbar, TextInput } from "flowbite-react";
+import Link from "next/link";
+import { AiOutlineSearch } from "react-icons/ai";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { dark, light } from "@clerk/themes";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import Head from "next/head";
 
 export default function Header() {
   const path = usePathname();
   const { theme, setTheme } = useTheme();
   const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const searchParams = useSearchParams();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const urlParams = new URLSearchParams(searchParams);
-    urlParams.set('searchTerm', searchTerm);
+    urlParams.set("searchTerm", searchTerm);
     const searchQuery = urlParams.toString();
     router.push(`/search?${searchQuery}`);
   };
 
   useEffect(() => {
     const urlParams = new URLSearchParams(searchParams);
-    const searchTermFromUrl = urlParams.get('searchTerm');
+    const searchTermFromUrl = urlParams.get("searchTerm");
     if (searchTermFromUrl) {
       setSearchTerm(searchTermFromUrl);
     }
@@ -82,14 +82,14 @@ export default function Header() {
             className="w-12 h-10 hidden sm:inline"
             color="gray"
             pill
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === 'light' ? <FaSun /> : <FaMoon />}
+            {theme === "light" ? <FaSun /> : <FaMoon />}
           </Button>
           <SignedIn>
             <UserButton
               appearance={{
-                baseTheme: theme === 'light' ? light : dark,
+                baseTheme: theme === "light" ? light : dark,
               }}
               userProfileUrl="/dashboard?tab=profile"
             />
@@ -105,30 +105,33 @@ export default function Header() {
         </div>
         <Navbar.Collapse>
           <Link href="/">
-            <Navbar.Link active={path === '/'} as={'div'}>
+            <Navbar.Link active={path === "/"} as={"div"}>
               Home
             </Navbar.Link>
           </Link>
 
           <Link href="/search?category=null">
-            <Navbar.Link active={path === '/search?category=null'} as={'div'}>
+            <Navbar.Link active={path === "/search?category=null"} as={"div"}>
               Blogs
             </Navbar.Link>
           </Link>
 
           <Link href="/about">
-            <Navbar.Link active={path === '/about'} as={'div'}>
+            <Navbar.Link active={path === "/about"} as={"div"}>
               About
             </Navbar.Link>
           </Link>
 
           <Link href="/contact">
-            <Navbar.Link active={path === '/contact'} as={'div'}>
+            <Navbar.Link active={path === "/contact"} as={"div"}>
               Contact us
             </Navbar.Link>
           </Link>
         </Navbar.Collapse>
       </Navbar>
+
+      <h1>hello</h1>
+    
 
       {/* NetPub Ad Unit */}
       <div className="flex justify-center my-4">
@@ -139,6 +142,8 @@ export default function Header() {
           data-slot="1"
         ></ins>
       </div>
+
+      <h1>hello2</h1>
     </>
   );
 }
