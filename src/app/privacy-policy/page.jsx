@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">8. Changes to This Policy</h2>
       <p className="mb-4">
-        We may update this Privacy Policy. Changes will be posted with the \"Effective Date.\" Check back periodically to stay informed.
+        We may update this Privacy Policy. Changes will be posted with the December 15, 2024 Check back periodically to stay informed.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">9. Contact Us</h2>

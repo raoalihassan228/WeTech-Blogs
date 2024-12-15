@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
         <a href="https://we-tech-blogs.vercel.app/" className="text-blue-500 hover:underline">
         https://we-tech-blogs.vercel.app/
         </a>{" "}
-        ("Website"), you agree to comply with and be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Website.
+        (&quot;Website&quot;), you agree to comply with and be bound by these Terms and Conditions (&quot;Terms&quot;). If you do not agree to these Terms, please do not use our Website.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">1. Use of the Website</h2>
